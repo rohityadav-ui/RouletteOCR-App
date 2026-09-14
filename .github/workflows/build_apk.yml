@@ -21,14 +21,15 @@ jobs:
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.2
 
     - name: Build Debug APK
       run: |
         if [ -d "android" ]; then
           cd android
         fi
-        gradle wrapper --gradle-version 8.2
-        ./gradlew assembleDebug --no-daemon
+        gradle assembleDebug --no-daemon --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
