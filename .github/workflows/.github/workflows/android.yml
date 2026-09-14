@@ -26,12 +26,8 @@ jobs:
       run: |
         if [ -d "android" ]; then
           cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
-        else
-          chmod +x gradlew
-          ./gradlew assembleDebug
         fi
+        gradle assembleDebug --no-daemon
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
