@@ -1,0 +1,6 @@
+{
+  "name": "Roulette OCR Predictor",
+  "description": "Automatic Roulette OCR Predictor with MediaProjection screen capture, Google ML Kit text recognition, floating overlay service, and live pattern logic engine.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
