@@ -27,9 +27,10 @@ jobs:
     - name: Build Debug APK
       run: |
         if [ -d "android" ]; then
-          cd android
+          cd android && gradle assembleDebug --no-daemon
+        else
+          gradle assembleDebug --no-daemon
         fi
-        gradle assembleDebug --no-daemon
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
