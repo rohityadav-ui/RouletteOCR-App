@@ -27,7 +27,7 @@ jobs:
         if [ -d "android" ]; then
           cd android
         fi
-        gradle wrapper
+        gradle wrapper --gradle-version 8.2
         ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK Artifact
